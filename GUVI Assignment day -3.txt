@@ -1,0 +1,265 @@
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+Given Code-
+var object=[{person:"Mohan",age:2,company:"Guvi"},
+            {person:"Rohan",age:3,company:"Guvi Geeks"},
+            {person:"Raju",age:4,company:"Guvi Geek Network"},];
+
+Ans-
+i) FOR LOOP-
+CODE-
+var object=[{person:"Mohan",age:2,company:"Guvi"},
+            {person:"Rohan",age:3,company:"Guvi Geeks"},
+            {person:"Raju",age:4,company:"Guvi Geek Network"}];
+            
+            for(let i=0;i<object.length;i++)
+            {console.log(`Name:${object[i].person} 
+Age:${object[i].age}
+Company:${object[i].company}`);
+if(i<object.length-1)
+console.log(" ");}
+
+OUTPUT-
+Name:Mohan 
+Age:2
+Company:Guvi
+ 
+Name:Rohan 
+Age:3
+Company:Guvi Geeks
+ 
+Name:Raju 
+Age:4
+Company:Guvi Geek Network
+
+ii) FOR IN LOOP
+CODE-
+var object=[{person:"Mohan",age:2,company:"Guvi"},
+            {person:"Rohan",age:3,company:"Guvi Geeks"},
+            {person:"Raju",age:4,company:"Guvi Geek Network"}];
+            
+            for(let element in object)
+            {console.log(`Name:${object[element].person} 
+Age:${object[element].age}
+Company:${object[element].company}`);
+if(element<object.length-1)
+                console.log(" ");
+            }
+OUTPUT-
+Name:Mohan 
+Age:2
+Company:Guvi
+ 
+Name:Rohan 
+Age:3
+Company:Guvi Geeks
+ 
+Name:Raju 
+Age:4
+Company:Guvi Geek Network
+
+iii) FOR OF LOOP
+CODE-
+var object=[{person:"Mohan",age:2,company:"Guvi"},
+            {person:"Rohan",age:3,company:"Guvi Geeks"},
+            {person:"Raju",age:4,company:"Guvi Geek Network"}];
+            
+            for(let element of object)
+            {
+console.log(`Name:${element.person} 
+Age:${element.age}
+Company:${element.company}`); }
+
+OUTPUT-
+Name:Mohan 
+Age:2
+Company:Guvi
+Name:Rohan 
+Age:3
+Company:Guvi Geeks
+Name:Raju 
+Age:4
+Company:Guvi Geek Network
+
+iv) FOR EACH LOOP
+CODE-
+var object=[{person:"Mohan",age:2,company:"Guvi"},
+            {person:"Rohan",age:3,company:"Guvi Geeks"},
+            {person:"Raju",age:4,company:"Guvi Geek Network"}];
+            
+            object.forEach((element)=>{
+console.log(`Name:${element.person} 
+Age:${element.age}
+Company:${element.company}`);
+});
+
+OUTPUT-
+Name:Mohan 
+Age:2
+Company:Guvi
+Name:Rohan 
+Age:3
+Company:Guvi Geeks
+Name:Raju 
+Age:4
+Company:Guvi Geek Network
+
+2.Create your own resume data in JSON format
+
+CODE-
+var cv={Name:"Krittika Podder",
+Address: "E-113/11, Ramgarh, Kolkata-700047, West Bengal",
+Mobile_No: "8697009612",
+Email: "krittika489podder@gmail.com",
+Academic_Qualification:{Bachelor_of_Technology:{Subject:"Civil engineering",
+Institute:"Netaji Subhash Engineering College",
+Board_or_University:"MAKAUT",
+Year_of_Passing:"2019",
+Passing_Aggregate_or_CGPA:"8.58 points"},
+Class_12:{Subject:"Science",
+Institute:"Assembly of God Church School",
+Board_or_University:"ISCE",
+Year_of_Passing:"2015",
+Passing_Aggregate_or_CGPA:"67%"},
+Class_10:{Subject:"All Subjects",
+Institute:"Assembly of God Church School",
+Board_or_University:"ISCE",
+Year_of_Passing:"2013",
+Passing_Aggregate_or_CGPA:"79.33%"},},
+Trainings_Projects_Internships_Undertaken:{i:{Name_of_Organisation:"M/s Sanfoundry",
+Title_of_work:"Contributing 250 MCQs on Water Resource Engineering",
+Type_of_work:"Internship",
+Duration:"Nov 2019-Feb 2020"},
+ii:{Name_of_Organisation:"Netaji Subhash Engineering College",
+Title_of_work:"Design of a (G+5) Commercial cum Residential Building    Including Recent Advancements",
+Type_of_work:"Final Year Project of BTech",
+Duration:"May 2018-May 2019"},
+iii:{Name_of_Organisation:"Public Works Department",
+Title_of_work:"Naihati Stadium and Administrative Building",
+Type_of_work:"Industrial training",
+Duration:"29.06.2018 to 12.07.2018"},
+iv:{Name_of_Organisation:"Netaji Subhash Engineering College",
+Title_of_work:"Moment Distribution- A Numerical Approach",
+Type_of_work:"Seminar included in BTech course",
+Duration:"Jan 2018 - Jun 2018"},
+v:{Name_of_Organisation:"Shapoorji Pallonji & Company Pvt Ltd",
+Title_of_work:"Belle Vue Nursing School & College & Eye Hospital",
+Type_of_work:"Industrial training",
+Duration:"17.12.2017 to 7.01.2018"},
+vi:{Name_of_Organisation:"CADD Centre",
+Title_of_work:"AutoCAD training",
+Type_of_work:"Training",
+Duration:"May 2017-Jun 2017"}},
+Present_Work_Experience:{Employer:"Traders & Engineers Pvt Ltd. (Kolkata, West Bengal)",
+Project:"Augmentation of Storage Capacity and Transmission Main under Jai Hind WTP – Clear Water Reservoir, Service Main and Electromechanical Works",
+Client:"Kolkata Environmental Improvement Investment Program Package (Under Kolkata Municipal Corporation)",
+Designation:"Project Engineer (QS & Billing)",
+Duration:"01.02.2020 to till date"},
+Previous_Work_Experience:{Employer:"Traders & Engineers Pvt Ltd. (Kolkata, West Bengal)",
+Project:"Augmentation of Storage Capacity and Transmission Main under Jai Hind WTP – Clear Water Reservoir, Service Main and Electromechanical Works",
+Client:"Kolkata Environmental Improvement Investment Program Package (Under Kolkata Municipal Corporation)",
+Designation:"Graduate Engineer Trainee",
+Duration:"15.07.19- 31.01.20"},
+Job_Description:"(1)Quantity Surveyor and billing Estimation of BOQ (2)Monthly and daily progress report preparation(3)Pour card preparation(4)Reconciliation of materials(5)Bar bending schedule(6)Communicating with consultants regarding design and drawing modifications",
+Achievements_or_Certifications:"(1) Awarded by Traders & Engineers Pvt Ltd for being the “Employee of The Month” for the month of November,2020 (2) NPTEL Online Certification on Electronic Waste Management Issues and Challenges.(3) Certificate of Excellence in Slogan Competition during “Vigilance Awareness Week”.(4) Certificate for successful completion of training of “Overview of AutoCAD 2D & ‘C’ Language”.(5) Certificate of Student membership from The Institution of Engineers (India) [ID- SM000723-1].",
+Computer_Proficiency:"AutoCAD,MS Excel,MS PowerPoint,MS Word,C Programming",
+Personal_Qualities:"Good communication skills,Foster management,Eager to learn,Accept challenges,Try to do a work effectively,Do not give up easily,Loyal",
+Hobbies:"Cooking,Singing,Observation",
+Family_Details:{Father:{Name:"Kamal Kumar Podder",
+Occupation:"Business",},
+Mother:{Name:"Kakali Podder",
+Occupation:"Homemaker",},
+Brother:{Name:"Sandarva Podder",
+Occupation:"Student",}},
+Date_of_Birth: "04.11.1997",
+Gender:"Female",
+Languages_known:"English, Bengali & Hindi",};
+
+console.log(cv);
+
+OUTPUT-
+{ Name: 'Krittika Podder',
+  Address: 'E-113/11, Ramgarh, Kolkata-700047, West Bengal',
+  Mobile_No: '8697009612',
+  Email: 'krittika489podder@gmail.com',
+  Academic_Qualification: 
+   { Bachelor_of_Technology: 
+      { Subject: 'Civil engineering',
+        Institute: 'Netaji Subhash Engineering College',
+        Board_or_University: 'MAKAUT',
+        Year_of_Passing: '2019',
+        Passing_Aggregate_or_CGPA: '8.58 points' },
+     Class_12: 
+      { Subject: 'Science',
+        Institute: 'Assembly of God Church School',
+        Board_or_University: 'ISCE',
+        Year_of_Passing: '2015',
+        Passing_Aggregate_or_CGPA: '67%' },
+     Class_10: 
+      { Subject: 'All Subjects',
+        Institute: 'Assembly of God Church School',
+        Board_or_University: 'ISCE',
+        Year_of_Passing: '2013',
+        Passing_Aggregate_or_CGPA: '79.33%' } },
+  Trainings_Projects_Internships_Undertaken: 
+   { i: 
+      { Name_of_Organisation: 'M/s Sanfoundry',
+        Title_of_work: 'Contributing 250 MCQs on Water Resource Engineering',
+        Type_of_work: 'Internship',
+        Duration: 'Nov 2019-Feb 2020' },
+     ii: 
+      { Name_of_Organisation: 'Netaji Subhash Engineering College',
+        Title_of_work: 'Design of a (G+5) Commercial cum Residential Building    Including Recent Advancements',
+        Type_of_work: 'Final Year Project of BTech',
+        Duration: 'May 2018-May 2019' },
+     iii: 
+      { Name_of_Organisation: 'Public Works Department',
+        Title_of_work: 'Naihati Stadium and Administrative Building',
+        Type_of_work: 'Industrial training',
+        Duration: '29.06.2018 to 12.07.2018' },
+     iv: 
+      { Name_of_Organisation: 'Netaji Subhash Engineering College',
+        Title_of_work: 'Moment Distribution- A Numerical Approach',
+        Type_of_work: 'Seminar included in BTech course',
+        Duration: 'Jan 2018 - Jun 2018' },
+     v: 
+      { Name_of_Organisation: 'Shapoorji Pallonji & Company Pvt Ltd',
+        Title_of_work: 'Belle Vue Nursing School & College & Eye Hospital',
+        Type_of_work: 'Industrial training',
+        Duration: '17.12.2017 to 7.01.2018' },
+     vi: 
+      { Name_of_Organisation: 'CADD Centre',
+        Title_of_work: 'AutoCAD training',
+        Type_of_work: 'Training',
+        Duration: 'May 2017-Jun 2017' } },
+  Present_Work_Experience: 
+   { Employer: 'Traders & Engineers Pvt Ltd. (Kolkata, West Bengal)',
+     Project: 'Augmentation of Storage Capacity and Transmission Main under Jai Hind WTP – Clear Water Reservoir, Service Main and Electromechanical Works',
+     Client: 'Kolkata Environmental Improvement Investment Program Package (Under Kolkata Municipal Corporation)',
+     Designation: 'Project Engineer (QS & Billing)',
+     Duration: '01.02.2020 to till date' },
+  Previous_Work_Experience: 
+   { Employer: 'Traders & Engineers Pvt Ltd. (Kolkata, West Bengal)',
+     Project: 'Augmentation of Storage Capacity and Transmission Main under Jai Hind WTP – Clear Water Reservoir, Service Main and Electromechanical Works',
+     Client: 'Kolkata Environmental Improvement Investment Program Package (Under Kolkata Municipal Corporation)',
+     Designation: 'Graduate Engineer Trainee',
+     Duration: '15.07.19- 31.01.20' },
+  Job_Description: '(1)Quantity Surveyor and billing Estimation of BOQ (2)Monthly and daily progress report preparation(3)Pour card preparation(4)Reconciliation of materials(5)Bar bending schedule(6)Communicating with consultants regarding design and drawing modifications',
+  Achievements_or_Certifications: '(1) Awarded by Traders & Engineers Pvt Ltd for being the “Employee of The Month” for the month of November,2020 (2) NPTEL Online Certification on Electronic Waste Management Issues and Challenges.(3) Certificate of Excellence in Slogan Competition during “Vigilance Awareness Week”.(4) Certificate for successful completion of training of “Overview of AutoCAD 2D & ‘C’ Language”.(5) Certificate of Student membership from The Institution of Engineers (India) [ID- SM000723-1].',
+  Computer_Proficiency: 'AutoCAD,MS Excel,MS PowerPoint,MS Word,C Programming',
+  Personal_Qualities: 'Good communication skills,Foster management,Eager to learn,Accept challenges,Try to do a work effectively,Do not give up easily,Loyal',
+  Hobbies: 'Cooking,Singing,Observation',
+  Family_Details: 
+   { Father: { Name: 'Kamal Kumar Podder', Occupation: 'Business' },
+     Mother: { Name: 'Kakali Podder', Occupation: 'Homemaker' },
+     Brother: { Name: 'Sandarva Podder', Occupation: 'Student' } },
+  Date_of_Birth: '04.11.1997',
+  Gender: 'Female',
+  Languages_known: 'English, Bengali & Hindi' }
+
+
+
+
+
+
+
